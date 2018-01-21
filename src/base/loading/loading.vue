@@ -1,6 +1,6 @@
 <template>
   <div class="loading">
-    <img width="24" height="24" src="./loading.gif">
+    <img width="24" height="24" src="./loading.gif" alt="载入中">
     <p class="desc">{{title}}</p>
   </div>
 </template>
@@ -8,6 +8,9 @@
 <script type="text/ecmascript-6">
   export default {
     props: {
+      /**
+      * 提示文字
+      */
       title: {
         type: String,
         default: '正在载入...'

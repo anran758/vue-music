@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script type="ecmascript-6">
+<script>
   import Tab from 'components/tab/tab'
   import MHeader from 'components/m-header/m-header'
   import Player from 'components/player/player'

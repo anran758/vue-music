@@ -14,7 +14,7 @@
   </transition>
 </template>
 
-<script type="ecmascript-6">
+<script>
   export default {
     props: {
       text: {

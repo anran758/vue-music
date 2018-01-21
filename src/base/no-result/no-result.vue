@@ -5,9 +5,12 @@
   </div>
 </template>
 
-<script type="ecmascript-6">
+<script>
   export default {
     props: {
+      /**
+       * 没有结果时的提示文字
+       */
       title: {
         type: String,
         default: ''

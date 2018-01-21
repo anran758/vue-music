@@ -9,43 +9,50 @@
   </div>
 </template>
 
-<script type="ecmascript-6">
-  export default {
-    props: {
-      radius: {
-        type: Number,
-        default: 100
-      },
-      percent: {
-        type: Number,
-        default: 0
-      }
+<script>
+export default {
+  props: {
+    radius: {
+      type: Number,
+      default: 100
     },
-    data() {
-      return {
-        dashArray: Math.PI * 100
-      }
-    },
-    computed: {
-      dashOffset() {
-        return (1-this.percent) * this.dashArray
-      }
+    percent: {
+      type: Number,
+      default: 0
+    }
+  },
+  data () {
+    return {
+      dashArray: Math.PI * 100
+    }
+  },
+  computed: {
+    dashOffset () {
+      return (1 - this.percent) * this.dashArray
     }
   }
+}
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "~common/stylus/variable"
+@import '~common/stylus/variable';
 
-  .progress-circle
-    position: relative
-    circle
-      stroke-width: 8px
-      transform-origin: center
-      &.progress-background
-        transform: scale(0.9)
-        stroke: $color-theme-d
-      &.progress-bar
-        transform: scale(0.9) rotate(-90deg)
-        stroke: $color-theme
+.progress-circle {
+  position: relative;
+
+  circle {
+    stroke-width: 8px;
+    transform-origin: center;
+
+    &.progress-background {
+      transform: scale(0.9);
+      stroke: $color-theme-d;
+    }
+
+    &.progress-bar {
+      transform: scale(0.9) rotate(-90deg);
+      stroke: $color-theme;
+    }
+  }
+}
 </style>

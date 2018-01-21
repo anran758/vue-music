@@ -10,7 +10,11 @@
           <div class="hot-key">
             <h1 class="title">热门搜索</h1>
             <ul>
-              <li @click="addQuery(item.k)" class="item" v-for="item in hotKey">
+              <li v-for="item in hotKey"
+                  :key="item.k"
+                  class="item"
+                  @click="addQuery(item.k)"
+              >
                 <span>{{item.k}}</span>
               </li>
             </ul>
@@ -40,7 +44,7 @@
   </div>
 </template>
 
-<script type="ecmascript-6">
+<script>
   import SearchBox from 'base/search-box/search-box'
   import {getHotKey} from 'api/search'
   import {ERR_OK} from 'api/config'
